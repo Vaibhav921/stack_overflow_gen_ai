@@ -1,0 +1,7 @@
+# requirements.txt
+# Add your project dependencies here
+requests
+azure-ai-openai
+azure-core
+flask
+flask_cors

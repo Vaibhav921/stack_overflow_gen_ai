@@ -1,0 +1,20 @@
+<div style="padding: 20px; max-width: 800px; margin: auto;">
+  <h2>StackOverflow Clone</h2>
+
+  <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <input [(ngModel)]="question" placeholder="Search..." style="flex: 1; padding: 8px;" />
+    <button (click)="search()">Search</button>
+  </div>
+
+  <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 15px;">
+    <input type="checkbox" [(ngModel)]="useAISort" (change)="toggleAISort()" />
+    Sort with AI
+  </label>
+
+  <div *ngIf="loading">Loading...</div>
+
+  <div *ngFor="let answer of answers" style="border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px;">
+    <h3>{{ answer.title }}</h3>
+    <p>{{ answer.body }}</p>
+  </div>
+</div>
