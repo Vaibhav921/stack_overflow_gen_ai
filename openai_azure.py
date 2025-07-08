@@ -4,9 +4,10 @@ from azure.identity import DefaultAzureCredential
 import openai
 
 from typing import List, Dict
+import os
 
-endpoint = "https://stack-overflow-answer-s-resource.cognitiveservices.azure.com/"
-api_key = "4wCdorEfizq1zyrqgv00QPzF8rsuim5dcw8owJFrgenRlmUaNty9JQQJ99BGACHYHv6XJ3w3AAAAACOGN7YP"
+endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
+api_key = os.environ.get("AZURE_OPENAI_API_KEY")
 deployment_name = "gpt-4.1"
 model_name = "gpt-4.1"
 
